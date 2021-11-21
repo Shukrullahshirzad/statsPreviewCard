@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(233, 47%, 7%);
+    color: bisque;
+}
+main{
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    width: 1440px;
+}
+.image{
+    display: block;
+    width: 300px;
+    flex-basis: 300px;
+}
