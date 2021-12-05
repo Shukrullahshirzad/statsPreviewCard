@@ -1,16 +1,123 @@
-body{
+:root{
+    --very-dark-blue : hsl(233, 47%, 7%); /* (main background)*/
+    --dark-desaturated-blue: hsl(244, 38%, 16%); /*  (card background)*/
+    --soft-violet: hsl(277, 64%, 61%);  /*(accent)*/
+    --white: hsl(0, 0%, 100%); /*  (main heading, stats) */
+    --transparent-white:hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+    --slightly-transparent-white : hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+}
+*{
     margin: 0;
     padding: 0;
-    background-color: hsl(233, 47%, 7%);
-    color: bisque;
+    box-sizing: border-box;
 }
-main{
-    background-color: hsl(244, 38%, 16%);
+body{
+    background: hsl(233, 47%, 7%);
+    height: 100vh;
     display: flex;
-    width: 1440px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+
+
+}
+.card{
+    width: 300px;
+    height: 90%;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+
 }
 .image{
-    display: block;
-    width: 300px;
-    flex-basis: 300px;
+    width: 100%;
+    height: 30%;
+    background:linear-gradient(hsla(277, 100%, 39%, 0.6), hsla(277, 100%, 39%, 0.6)  ), url(/statsPreviewCard/images/image-header-mobile.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+.text{
+    padding: 15px;
+}
+h1{
+    color: var(--white);
+    font-family:'Inter', sans-serif;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 20px 0px;
+
+
+}
+h1 span{
+    color: var(--soft-violet);
+}
+p{
+    color: var(--transparent-white);
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-family: 'Inter';
+}
+.figures{
+    color:var(--slightly-transparent-white);
+    text-transform: uppercase;
+}
+.figures h2{
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    
+}
+.figures div{
+    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.bold{
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        background: hsl(233, 47%, 7%);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 15px;
+    
+    
+    }
+    .card{
+        width: 70%;
+        height: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: hsl(244, 38%, 16%);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .image{
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(hsla(277, 100%, 39%, 0.6), hsla(277, 100%, 39%, 0.6)  ), url(/statsPreviewCard/images/image-header-mobile.jpg) ;
+        background-size: cover;
+        background-position: center;
+    }
+    .text{
+        text-align: left;
+        padding: 10px 30px;
+        margin: 20px 30px 20px 30px;
+    }
+    .figures{
+        display: flex;
+
+    }
+    .figures div{
+        margin-right: 50px;
+        text-align: center;
+    }
 }
